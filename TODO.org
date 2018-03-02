@@ -1,0 +1,6 @@
+* TODO separate the polling logic (for checking versions) from the push-based logic (for upgrading)
+I guess the most important thing to begin with is to be able to set any function that will be triggered on a push event, when a package is upgradable. I want to be able to configure /what/ happens when a package is considered upgradable and to rest assured it will be executed whenever that happens.
+* TODO allow configuring a version policy
+It'd be best to expose configuration, probably via an environment variable or something, to set whether major, minor, or patch revisions indicate that a package is upgradable.
+* TODO provide a way to install the script as a scheduled task
+I really should provide a sane default installation function/script that will set this behaviour up as a scheduled task.

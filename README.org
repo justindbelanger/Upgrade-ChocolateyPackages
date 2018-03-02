@@ -1,0 +1,9 @@
+* Purpose
+This script is intended to alleviate the tedium of checking the output from the Chocolatey package manager to see which packages are upgradable. It was starting to become a labourious task for me, so I decided, hey, why not learn some PowerShell and automate the work!
+* Usage
+Simply type ". .\Upgrade-ChocolateyPackages.ps1" to 'dot-source' the script's exposed functions into your PowerShell session. Then, you can run
+1. "cup --whatif -r all | Parse-Packages" to see the parsed list of Chocolatey packages that Chocolatey considers upgradable; 
+2. "cup --whatif -r all | Parse-Packages | Select-UpgradablePackages" to see the filtered list of packages this script considers upgradable; and 
+3. "Upgrade-ChocolateyPackages" (just the function name) to automatically upgrade the Chocolatey packages this script thinks should be upgraded.
+* Contributing
+Just send me a pull request! I'd love feedback, comments, bug reports, and even just some discussion about Chocolatey, PowerShell, and free & open source software development in the world of Windows!
